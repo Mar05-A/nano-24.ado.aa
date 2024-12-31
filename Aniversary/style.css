@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: lato, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #d3e1ec, #78b3fb); /* Gradiente en tonos cálidos */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+p {
+    text-align: justify; /* Alineación justificada para que el texto ocupe todo el ancho */
+    font-family: 'Dancing Script', cursive; /* Fuente bonita */
+    font-size: 1.2rem;
+    line-height: 1.8; /* Espaciado entre líneas */
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    text-indent: 2em; /* Sangría en el primer renglón de cada párrafo */
+}
+
+p br {
+    margin-bottom: 10px; /* Espacio extra después de los saltos de línea */
+}
+
+
+
+.slider-frame {
+    width: 25%; /* Ancho reducido del carrusel */
+    max-width: 600px; /* Máximo ancho */
+    height: 510px; /* Altura ajustada */
+    margin: 30px auto; /* Centrado */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para diseño moderno */
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: calc(100% * 3); /* Ajusta al número de imágenes */
+    animation: slide 50s infinite; /* Animación continua */
+}
+
+.slider-frame li {
+    list-style: none;
+    flex: 0 0 100%; /* Cada imagen ocupa todo el ancho del carrusel */
+}
+
+.slider-frame img {
+    width: 35%; /* Se adapta al ancho del contenedor */
+    height: 100%; /* Se adapta a la altura del contenedor */
+    object-fit: cover; /* Llena el contenedor manteniendo la proporción, puede recortar */
+    border-radius: 10px; /* Coincide con las esquinas redondeadas del carrusel */
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    8.3333% { transform: translateX(-100%); }
+    16.6667% { transform: translateX(-200%); }
+    25% { transform: translateX(-300%); }
+    33.3333% { transform: translateX(-400%); }
+    41.6667% { transform: translateX(-500%); }
+    50% { transform: translateX(-600%); }
+    58.3333% { transform: translateX(-700%); }
+    66.6667% { transform: translateX(-800%); }
+    75% { transform: translateX(-900%); }
+    83.3333% { transform: translateX(-1000%); }
+    91.6667% { transform: translateX(-1100%); }
+    100% { transform: translateX(-1200%); }
+}
+
+
+
+@media (max-width: 600px) {
+    .slider-frame {
+        width: 90%; /* Más pequeño para pantallas pequeñas */
+        height: 250px; /* Ajusta la altura para móviles */
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
